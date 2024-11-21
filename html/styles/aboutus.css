@@ -1,0 +1,259 @@
+.about-tenace {
+    color: var(--text-color);
+    text-align: center;
+    font-size: var(--font-size-h3);
+    margin-top: 15vh;
+}
+
+.tenace {
+    color: var(--text-light);
+}
+
+.tenace-intro_container {
+    background-color: var(--background-color);
+}
+
+.tenace-intro {
+    padding: 24px;
+    text-align: center;
+}
+
+.tenace-intro p {
+    color: var(--text-color);
+    line-height: 1.2;
+}
+
+.tenace-intro img {
+    width: 100%;
+}
+
+.info-section {
+    padding: 24px;
+}
+
+.info-card {
+    padding: 16px;
+    margin: 24px;
+}
+
+.info-image {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.info-text {
+    color: var(--text-color);
+    text-align: center;
+    line-height: 1.2;
+}
+
+.company-info {
+    background-color: var(--text-color);
+    width: 100%;
+}
+
+.info-item {
+    margin:10px;
+    text-align: center;
+}
+
+.team-info {
+    font-size: var(--font-size-h2);
+    margin-bottom: 8px;
+}
+
+.team-info img {
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.team-info_text {
+    font-size: var(--font-size-h4);
+    line-height: 1.2;
+    margin-bottom: 16px;
+    padding: 24px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-radius: 10px;
+}
+
+.story-info {
+    font-size: var(--font-size-h2);
+    margin-bottom: 8px;
+}
+
+.story-info img {
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.story-info_text {
+    font-size: var(--font-size-h4);
+    line-height: 1.2;
+    margin-bottom: 16px;
+    padding: 24px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-radius: 10px;
+}
+
+.callout-container {
+    background-color: transparent;
+    padding: 36px;
+    text-align: center;
+}
+
+.callout-text {
+    color: var(--text-color);
+    font-size: var(--font-size-h3);
+    margin-bottom: 24px;
+}
+
+.callout-button {
+    padding: 10px 30px;
+    background-color: var(--text-light);
+    color: var(--text-color);
+}
+
+@media screen and (min-width: 800px) {
+    
+    .tenace-intro_container {
+        display: flex;
+        margin: 36px;
+        align-items: center;
+    }
+
+    .tenace-intro {
+        width: 50%;
+    }
+
+    .company-info {
+        padding: 70px;
+    }
+
+    .info-text {
+        font-size: var(--font-size-h2);
+        line-height: 1.4;
+    }
+
+    .info-item {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        animation-timeline: scroll();
+        animation-name: scrollPage;
+    }
+
+
+    @keyframes scrollPage {
+        0% {
+            transform: scaleX(0);
+        }
+        50% {
+            transform: scale(0.5);
+        }
+        100% {
+            transform: scaleX(1);
+        }
+    }
+
+    .team-info, .story-info {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: center;
+    }
+
+    .team-info_text, .story-info_text {
+        font-size: var(--font-size-h4); 
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: center;
+        height: 300px;
+    }
+
+    .team-info {
+        transition: all .2s ease-in-out;
+    }
+
+    .team-info:hover {
+        transform: scale(0.7);
+    }
+
+    .story-info {
+        transition: all .2s ease-in-out;
+    }
+
+    .story-info:hover {
+        transform: scale(0.7);
+    }
+
+    .callout-text {
+        font-size: var(--font-size-h1);
+    }
+
+    .callout-button {
+        padding: 20px 50px;
+        font-size: var(--font-size-h4);
+        background-color: var(--text-color);
+        color: var(--background-color);
+    }
+
+    .callout-button:hover {
+        background-color: var(--text-hover);
+        color: var(--text-color);
+        transition: 0.3s;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    .tenace-intro p {
+        font-size: var(--font-size-h3);
+    }
+
+    .info-section {
+        display: flex;
+    }
+
+    .info-card {
+        position: relative;
+        width: auto;
+    }
+
+    .info-image {
+        display: block;
+    }
+
+    .info-card_hover {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        transition: 1s ease;
+        background-image: url(./images/Hacker-Cyber-Security-Internet-Sectricity\ \(1\).jpg);
+        border-radius: 10px;
+        padding: 16px;
+    }
+
+    .info-card:hover .info-card_hover {
+        opacity: 1;
+        scale: 1.1;
+    }
+
+    .info-text {
+        font-size: var(--font-size-h5);
+        align-items: center;
+        position: absolute;
+    }
+
+    .team-info_text {
+        font-size: var(--font-size-h3);
+    }
+
+    .story-info_text {
+        font-size: var(--font-size-h3);
+    }
+}
